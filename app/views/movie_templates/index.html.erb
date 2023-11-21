@@ -1,5 +1,5 @@
 <h1>
-  List of all movies
+List of all movies
 </h1>
 
 <hr>
@@ -105,8 +105,11 @@
     </td>
 
     <td>
-      <%= movie.director.name %>
-      
+      <% if movie.director != nil %>
+        <%= movie.director.name %>
+      <% else %>
+        Uh oh! We weren't able to find a director for this movie.
+      <% end %>
     </td>
 
     <td>
